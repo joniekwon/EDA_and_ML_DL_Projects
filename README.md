@@ -7,3 +7,21 @@
 - 미술작품 분류 (2022.02.13) 
   - [[제출코드](https://github.com/joniekwon/programers-assignments/blob/main/artpaintings_classification/artpaintings_classification_fastai.ipynb)]
   - LB 88.57142857142857
+
+## [Practica_competency_task]New_type(BE)
+- Flask를 이용한 API 구현
+  - 고객이름을 이용한 예약 조회
+    - 쿼리가 "all"일 경우 모든 예약 정보를 체크인 날짜 기준 오름차순 정렬 후 결과 반환
+      ```
+      search_results = sorted(search_results, key=lambda x: x["check_in"])
+    - 고객 이름 대소문자 구분, 포함된 알파벳이 있는 결과 모두 반환
+      ```
+      for i, resv in enumerate(reservation):
+          if customer_name in resv["customer_name"]:
+            search_results.append(reservation[i])
+    - 잘못 된 요청 시 에러처리
+      ```
+      try:
+        ...
+      except Exception:
+        return jsonify({"error":"Invalid data format"}), 400
