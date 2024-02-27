@@ -7,6 +7,3 @@
 - 미술작품 분류 (2022.02.13) 
   - [[제출코드](https://github.com/joniekwon/programers-assignments/blob/main/artpaintings_classification/artpaintings_classification_fastai.ipynb)]
   - LB 88.57142857142857
-
-## [FullStack]
-- 
